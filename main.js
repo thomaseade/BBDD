@@ -72,7 +72,7 @@ const connect = async () => {
 
 
      // eliminar notas cuya fecha tenga mas de 10 años 
-     //  const sql =  `DELETE  FROM reto1.marks WHERE date = "2012-10-25"`;
+     //  const sql =  `DELETE  FROM reto1.marks WHERE date < "2013-20-06"`;
 
 
      //cambiar las notas inferiores a 5 por un 5:
