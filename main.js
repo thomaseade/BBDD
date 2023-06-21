@@ -149,30 +149,12 @@ const connect = async () => {
 
 
 
-
-
-
-
-
         
     
      const [result,data] = await connection.execute(sql);
      console.log(result);
     
      
-
-
-
-     
-
-
-
-
-
-
-
-
-
 
  
 
