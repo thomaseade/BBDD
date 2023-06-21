@@ -142,9 +142,9 @@ const connect = async () => {
 
      //Obtén la media aritmética de las notas que se han dado en el último año por alumno.
 
-     const sql =` SELECT id_student, AVG(mark) AS media_notas FROM reto1.marks
-                 WHERE date > "2023-01-01"
-                 GROUP BY id_student`;
+     //  const sql =` SELECT id_student, AVG(mark) AS media_notas FROM reto1.marks
+     //              WHERE date > "2023-01-01"
+     //              GROUP BY id_student`;
  
 
 
