@@ -115,9 +115,9 @@ const connect = async () => {
 
      //Calcular el numero de profesores que hay por cada asignatura.
 
-     // const sql =`SELECT subject_id, COUNT(teacher_id) AS numero_profesores
-     //             FROM subject_teacher
-     //             GROUP BY subject_id`;
+    //  const sql =`SELECT subject_id, COUNT(teacher_id) AS numero_profesores
+    //              FROM subject_teacher
+    //              GROUP BY subject_id`;
 
 
 
@@ -142,15 +142,47 @@ const connect = async () => {
 
      //Obtén la media aritmética de las notas que se han dado en el último año por alumno.
 
-     //  const sql =` SELECT id_student, AVG(mark) AS media_notas FROM reto1.marks
-     //              WHERE date > "2023-01-01"
-     //              GROUP BY id_student`;
+     //   const sql =` SELECT id_student, AVG(mark) AS media_notas FROM reto1.marks
+     //               WHERE date > "2023-01-01"
+     //               GROUP BY id_student`;
  
 
 
 
+                 //  DIA 3
+         //reto 1
+
+
+        //   const sql =`SELECT students.first_name, students.last_name, subjects.title FROM students
+        //               INNER JOIN grupos ON students.id_group = grupos.id_group
+        //               INNER JOIN subject_teacher ON grupos.id_group = subject_teacher.group_id
+        //               INNER JOIN subjects ON subject_teacher.subject_id = subjects.subject_id`; 
+ 
+
+ 
+
+        // reto 2
+
+
+        // const sql = `SELECT first_name, last_name, title FROM teachers 
+        //              INNER JOIN subject_teacher ON teachers.teacher_id = subject_teacher.teacher_id 
+        //              INNER JOIN subjects ON subject_teacher.subject_id = subjects.subject_id;`
+
+
+
+        // reto 3
+
+
         
-    
+        //   const sql =  `SELECT subjects.title, teachers.first_name, teachers.last_name, COUNT(students.student_id) AS total_students FROM subjects
+        //                 INNER JOIN subject_teacher ON subjects.subject_id = subject_teacher.subject_id
+        //                 INNER JOIN teachers ON subject_teacher.teacher_id = teachers.teacher_id
+        //                 INNER JOIN students ON subject_teacher.group_id = students.id_group
+        //                 GROUP BY subjects.title, teachers.first_name, teachers.last_name`;
+ 
+
+
+
      const [result,data] = await connection.execute(sql);
      console.log(result);
     
